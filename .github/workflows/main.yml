@@ -1,0 +1,16 @@
+name: Hello World CI
+
+on:
+  push:
+    branches: [ main, master ] # Triggers the workflow on pushes to the main or master branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Specifies the operating system for the job
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Checks out your repository code
+
+      - name: Say Hello World
+        run: echo "Hello World from GitHub Actions!" # Executes a simple shell command
